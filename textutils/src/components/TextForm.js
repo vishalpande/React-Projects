@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
-  // const clear = () => {
-  //   const newText3 = text.clear();
-  //   setText(newText3);
-  // };
+  const clear = () => {
+    const newText3 = text.clear();
+    setText(newText3);
+  };
 
   const handleUpClick2 = () => {
     const newText2 = text.toLowerCase();
@@ -43,9 +43,9 @@ export default function TextForm(props) {
         <button className="btn btn-secondary " onClick={handleUpClick2}>
           Convert to lowercase
         </button>
-        {/* <button className="btn btn-danger " onClick={clear}> */}
-        {/* Clear */}
-        {/* </button> */}
+       <button className="btn btn-danger " onClick={clear}>
+      Clear 
+     </button> 
       </div>
       <div className="container my-3">
         <h2>Your Text Summary</h2>
