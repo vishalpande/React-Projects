@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
-  const clear = () => {
-    const newText3 = text.clear();
-    setText(newText3);
-  };
+  // const handleClear = (event) => {
+  //   event.preventDefault();
+  //   event.target.reset();
+  // };
 
-  const handleUpClick2 = () => {
+  const handleLpClick2 = () => {
     const newText2 = text.toLowerCase();
     setText(newText2);
   };
@@ -40,12 +40,12 @@ export default function TextForm(props) {
         <button className="btn btn-primary" onClick={handleUpClick}>
           Convert to uppercase
         </button>
-        <button className="btn btn-secondary " onClick={handleUpClick2}>
+        <button className="btn btn-secondary " onClick={handleLpClick2}>
           Convert to lowercase
         </button>
-       <button className="btn btn-danger " onClick={clear}>
-      Clear 
-     </button> 
+        {/* <button className="btn btn-danger " onClick={handleClear}>
+          Clear
+        </button> */}
       </div>
       <div className="container my-3">
         <h2>Your Text Summary</h2>
@@ -54,9 +54,8 @@ export default function TextForm(props) {
         </p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
         <h3>Preview</h3>
-      <p>{text}</p>
+        <p>{text}</p>
       </div>
-     
     </>
   );
 }
