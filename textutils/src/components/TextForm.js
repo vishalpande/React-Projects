@@ -22,12 +22,6 @@ export default function TextForm(props) {
   };
 
 
-//   const undo=()=>{
-// const newText4=text.pop()
-// setText(newText4);
-
-
-  // }
 
   const [text, setText] = useState("Enter text here");
   // setText('hello') ;
@@ -54,9 +48,7 @@ export default function TextForm(props) {
         
         
         
-        {/* <button className="btn btn-primary " onClick={undo}>
-       Undo
-        </button> */}
+
         
         
         <button className="btn btn-danger " onClick={handleClear}>
