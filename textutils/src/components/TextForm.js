@@ -68,4 +68,4 @@ export default function TextForm(props) {
     </>
   );
 }
-//also we can
+//also we can use the export default
