@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
-  // const handleClear = (event) => {
-  //   event.preventDefault();
-  //   event.target.reset();
-  // };
+  const handleClear = () => {
+   const newText3=''
+   setText(newText3)
+  };
 
   const handleLpClick2 = () => {
     const newText2 = text.toLowerCase();
@@ -20,6 +20,14 @@ export default function TextForm(props) {
     // console.log("OnChange was clicked");
     setText(event.target.value);
   };
+
+
+//   const undo=()=>{
+// const newText4=text.pop()
+// setText(newText4);
+
+
+  // }
 
   const [text, setText] = useState("Enter text here");
   // setText('hello') ;
@@ -43,9 +51,18 @@ export default function TextForm(props) {
         <button className="btn btn-secondary " onClick={handleLpClick2}>
           Convert to lowercase
         </button>
-        {/* <button className="btn btn-danger " onClick={handleClear}>
-          Clear
+        
+        
+        
+        {/* <button className="btn btn-primary " onClick={undo}>
+       Undo
         </button> */}
+        
+        
+        <button className="btn btn-danger " onClick={handleClear}>
+          Clear
+        </button>
+       
       </div>
       <div className="container my-3">
         <h2>Your Text Summary</h2>
